@@ -1,0 +1,25 @@
+.movies__main {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  .movies__title {
+    margin-bottom: 50px;
+    align-items: center;
+    .title {
+      text-transform: capitalize;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-left: 20px;
+        color: #073763;
+      }
+    }
+    .dates {
+      font-weight: 500;
+      margin: 10px 0 0 5px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.review {
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  .review__content {
+    color: #324d67;
+    line-height: 1.5;
+    a {
+      text-decoration: underline;
+    }
+    &.close {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      white-space: normal;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .review__toggle {
+    color: #49a6e9;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  .review__username {
+    text-align: right;
+  }
+}

@@ -1,0 +1,113 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 0;
+  z-index: 1;
+  .header_center {
+    width: 85vw;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.bar {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  .icon {
+    margin: 5px 8px 0 0;
+    font-size: 40px;
+    color: #49a6e9;
+  }
+}
+
+.wrap main {
+  margin-top: 110px;
+}
+
+.navigation {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  a {
+    margin: 0 30px;
+    display: block;
+    font-size: 20px;
+    color: #073763;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #49a6e9;
+    }
+  }
+  .active {
+    color: #49a6e9;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0;
+    .header_center {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .header-bar {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    .bar {
+      display: block;
+      color: #49a6e9;
+      font-size: 30px;
+      margin-top: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+  .navigation {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.3s linear;
+    &.show {
+      height: 201px;
+    }
+    a {
+      margin: 0;
+      padding: 20px 30px;
+      display: block;
+      font-size: 20px;
+      color: #073763;
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: #93d2ff;
+        color: #fff;
+      }
+    }
+  }
+}
