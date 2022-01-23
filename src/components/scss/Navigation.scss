@@ -92,6 +92,7 @@
     overflow: hidden;
     height: 0px;
     transition: all 0.3s linear;
+    border-radius: 0px;
     &.show {
       height: 201px;
     }

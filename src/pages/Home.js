@@ -32,7 +32,7 @@ const Home = () => {
                                 <FaChevronRight/>
                             </Link>
                         </div>
-                        <ul className="movie-list">
+                        <ul className="home__movie-list">
                             {entrie[1].slice(0, 20).map((movie, index) =>  (
                                 <Movie
                                     key={index}

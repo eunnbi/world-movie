@@ -18,7 +18,7 @@
         font-size: 30px;
       }
     }
-    .movie-list {
+    .home__movie-list {
       display: flex;
       overflow-x: scroll;
       padding-bottom: 30px;
@@ -56,7 +56,7 @@
   .home__main {
     padding: 100px 0 0;
     .movie__section {
-      .movie-list {
+      .home__movie-list {
         min-height: 300px;
         .movie {
           .movie__poster {
@@ -78,7 +78,7 @@
   .home__main {
     padding: 100px 0 0;
     .movie__section {
-      .movie-list {
+      .home__movie-list {
         min-height: 250px;
         .movie {
           .movie__poster {

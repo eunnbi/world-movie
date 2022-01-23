@@ -8,7 +8,7 @@ import { MdOutlineRateReview } from "react-icons/md";
 import {ImCrying} from "react-icons/im";
 import "./scss/Detail.scss";
 
-const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/w342';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w342';
 
 const Detail = () => {
     const { id } = useParams();

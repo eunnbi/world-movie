@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {AiFillStar} from "react-icons/ai";
 import "./scss/Movie.scss";
 
-const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/w342';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w342';
 
 const Movie = ({id, year, title, originalTitle, poster, rating}) => {
     const path = `/movie/${id}`;

@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 3rem 0;
   .search__form {
+    margin-bottom: 50px;
     .title {
       color: #112a42;
       font-size: 40px;
@@ -27,5 +28,10 @@
     font-size: 15px;
     text-transform: capitalize;
     letter-spacing: 2px;
+  }
+  .movie__poster {
+    img {
+      width: 267px;
+    }
   }
 }

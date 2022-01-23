@@ -1,10 +1,10 @@
 import React from "react";
 import Movie from "./Movie";
-import "./scss/MovieList.scss";
+import styles from "./scss/MovieList.module.scss";
 
 const MovieList = ({movies}) => {
     return(
-        <ul className="movie-list">
+        <ul className={styles.movieList}>
             {movies.map((movie, index) =>
                  <Movie
                  key={index}
@@ -14,6 +14,7 @@ const MovieList = ({movies}) => {
                  poster={movie.poster_path}
                  id={movie.id}
                  rating={movie.vote_average}
+                 className={styles.movie}
                  />
             )}
         </ul>
