@@ -11,6 +11,7 @@ export const initialMovies = () => ({
     type: INITIALIZE_MOVIES
 })
 
+
 export const searchMovies = (page, query) => async (dispatch) => {
     if (query === ""){
         dispatch(initialMovies());
@@ -33,7 +34,6 @@ export const searchMovies = (page, query) => async (dispatch) => {
             })
         }    
     }
-    
 }
 
 

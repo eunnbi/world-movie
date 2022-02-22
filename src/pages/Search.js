@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { searchMovies, initialMovies } from "../modules/search";
 import Loading from "../components/Loading";
 import MovieList from "../components/MovieList";
-
+import { searchMovies } from "../lib/api";
+import { useQuery } from "react-query";
 import "./scss/Search.scss";
 
-const Search = () => {
-    const { loading, movies } = useSelector(state => state.search);
-    const dispatch = useDispatch();
-    const [setShowNav] = useOutletContext();
-    const [input, setInput] = useState("");
-    
-    const onSearch = (e) => {
-        setInput(e.target.value);
-        dispatch(searchMovies(1, e.target.value));
-    }
 
-    useEffect(() => {
-        setShowNav(false);
-        return () => {
-            dispatch(initialMovies());
-        }
-    }, []);
+const Search = () => {
+    const [query, setQuery] = useState("");
+    const {isLoading, data} = useQuery(["search", query], searchMovies);
+    
+    const [setShowNav] = useOutletContext();
+    useEffect(() => setShowNav(false), []);
+
+    const onSearch = (e) => {
+        setQuery(e.target.value);
+    }
+    
     return (
         <main className="search__main">
             <section className="search__form">
@@ -31,18 +25,17 @@ const Search = () => {
                 <form>
                     <input 
                         type="text" 
-                        value={input || ""}
+                        value={query}
                         onChange={onSearch}
                     />
                 </form>    
             </section>
-            {loading ? <Loading/> :
-                (input !== "" && movies && movies.length === 0) ? (
+            {isLoading ? <Loading/> :
+                (query !== "" && data.length === 0) ? (
                     <p className="not-found">Movie Not Found!</p>
                 ) : (
-                    movies &&
-                   <section className="movies__main">
-                        <MovieList movies={movies}/>
+                    <section className="movies__main">
+                        <MovieList movies={data}/>
                     </section> 
                 )  
             }

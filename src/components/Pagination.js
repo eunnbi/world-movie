@@ -4,11 +4,11 @@ import "./scss/Pagination.scss";
 
 const Pagination = ({total, limit, page, setPage}) => {
     const numPages = Math.ceil(total / limit);
-    const [btnNum, setbtnNum] = useState(10);
+    const [btnNum] = useState(10);
     const [offset, setOffset] = useState(0);
     useEffect(() => {
         if (page > offset + btnNum){
-            setOffset(offset + 10);
+            setOffset(offset + btnNum);
         }
         else if (page === offset){
             setOffset(offset - btnNum);

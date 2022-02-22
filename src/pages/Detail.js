@@ -1,11 +1,10 @@
-import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getDetails } from "../modules/details";
 import Loading from "../components/Loading";
 import Review from "../components/Review";
 import { MdOutlineRateReview } from "react-icons/md";
 import {ImCrying} from "react-icons/im";
+import { useQueries } from "react-query";
+import { getDetails, getReviews } from "../lib/api";
 import "./scss/Detail.scss";
 
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w342';
@@ -13,19 +12,18 @@ const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w342';
 const Detail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { loading, details, reviews } = useSelector(state => state.details);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getDetails(id));
-    }, []);
+    const [detailsQuery, reviewsQuery] = useQueries([
+        { queryKey: ['details', id], queryFn: getDetails},
+        { queryKey: ["reviews", id], queryFn: getReviews}
+    ])
+    const loading = detailsQuery.isLoading || reviewsQuery.isLoading;
+    const details = detailsQuery.data;
+    const reviews = reviewsQuery.data;
 
     if (loading){
         return (
             <Loading/>
-        )
-    }
-    if (!loading && !details && !reviews){
-        return null;
+        );
     }
     const { title, release_date, original_title : originalTitle, genres, overview, poster_path: poster } = details;
     const imageSrc = `${IMAGE_BASE_URL}${poster}`;

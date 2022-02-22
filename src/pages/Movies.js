@@ -10,9 +10,9 @@ import "./scss/Movies.scss";
 const Movies = () => {
     const { type } = useParams();
     const { movies } = useContext(moviesContext);
-    const [data, setData] = useState(movies[type]);
+    const [data] = useState(movies[type]);
     const [page, setPage] = useState(1);
-    const [limit, setLimit] = useState(12);
+    const [limit] = useState(12);
     const offset = (page - 1) * limit;
     useEffect(() => {
         window.scrollTo({
@@ -30,10 +30,13 @@ const Movies = () => {
                     </div>
                 </div>
             }
-            {data && (
-                <MovieList movies={data.slice(offset, offset + limit)}/>
-            )}
-            {data && <Pagination total={data.length} limit={limit} page={page} setPage={setPage}/>}
+            {data &&
+                <>
+                    <MovieList movies={data.slice(offset, offset + limit)}/>
+                    <Pagination total={data.length} limit={limit} page={page} setPage={setPage}/>
+                </>
+                
+            }
         </main>
     );
 }
