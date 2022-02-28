@@ -1,6 +1,31 @@
 import {useEffect, useState} from "react";
 import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
-import "./scss/Pagination.scss";
+import styled from "styled-components";
+
+const StyledPagination = styled.nav`
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    button {
+        color: #fff;
+        background: #000;
+        padding: 10px;
+        border-radius: 5px;
+        flex-basis: 34px;
+        margin: 0 10px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+        background-color: #49a6e9;
+        }
+        &[disabled] {
+        cursor: auto;
+        background: rgba(0, 0, 0, 0.5);
+        }
+        &[aria-current] {
+        background-color: #49a6e9;
+        }
+    }
+`;
 
 const Pagination = ({total, limit, page, setPage}) => {
     const numPages = Math.ceil(total / limit);
@@ -14,8 +39,9 @@ const Pagination = ({total, limit, page, setPage}) => {
             setOffset(offset - btnNum);
         }
     }, [page]);
+    
     return (
-        <nav className="pagination">
+        <StyledPagination>
             <button onClick={() => setPage(page - 1)} disabled={page === 1}>
                 <FaChevronLeft/>
             </button>
@@ -29,7 +55,7 @@ const Pagination = ({total, limit, page, setPage}) => {
             <button onClick={() => setPage(page + 1)} disabled={page === numPages}>
                 <FaChevronRight/>
             </button>
-        </nav>
+        </StyledPagination>
     )
 }
 

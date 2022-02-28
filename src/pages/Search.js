@@ -1,45 +1,48 @@
-import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
-import Loading from "../components/Loading";
-import MovieList from "../components/MovieList";
-import { searchMovies } from "../lib/api";
+import { useState } from "react";
 import { useQuery } from "react-query";
-import "./scss/Search.scss";
+import Loading from "../components/common/Loading";
+import MovieList from "../components/MovieList";
+import SearchForm from "../components/SearchForm";
+import { searchMovies } from "../lib/api";
+import { useCloseNav } from "../hooks";
+import styled from "styled-components";
 
 
-const Search = () => {
+const SearchMain = styled.main`
+    width: 90vw;
+    max-width: 1170px;
+    margin: 110px auto;
+    padding: 3rem 0;
+    .Search-not-found {
+        margin-top: 5px;
+        color: #bb2524;
+        font-size: 15px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+    }
+`
+function Search() {
+    useCloseNav();
     const [query, setQuery] = useState("");
     const {isLoading, data} = useQuery(["search", query], searchMovies);
-    
-    const [setShowNav] = useOutletContext();
-    useEffect(() => setShowNav(false), []);
 
     const onSearch = (e) => {
         setQuery(e.target.value);
     }
     
     return (
-        <main className="search__main">
-            <section className="search__form">
-                <h1 className="title">Search Movies</h1>
-                <form>
-                    <input 
-                        type="text" 
-                        value={query}
-                        onChange={onSearch}
-                    />
-                </form>    
-            </section>
+        <SearchMain>
+            <SearchForm query={query} onSearch={onSearch}/>
             {isLoading ? <Loading/> :
                 (query !== "" && data.length === 0) ? (
-                    <p className="not-found">Movie Not Found!</p>
+                    <p className="Search-not-found">Movie Not Found!</p>
                 ) : (
-                    <section className="movies__main">
+                    <section>
                         <MovieList movies={data}/>
                     </section> 
                 )  
             }
-        </main>
+        </SearchMain>
     );
 }
 
