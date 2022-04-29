@@ -2,7 +2,7 @@
 React JS Fundamentals Course
 - Introduce Various Movies: Popular, Top Rated, Now Playing
 - Search Movies
-- Movie Favorite
+- Movie Favorites
 
 ## Tech Stack
 <img alt="Javascript" src ="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&logo=JavaScript&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/>
