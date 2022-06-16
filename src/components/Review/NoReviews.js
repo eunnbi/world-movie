@@ -1,12 +1,13 @@
 import { ImCrying } from "react-icons/im";
 import styled from "styled-components";
 
-const StyledNoReviews = styled.p`
+const NoReviewsWrapper = styled.p`
   font-size: 1.8rem;
   color: ${({ theme }) => theme.color.blueBlack};
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
   svg {
     margin: 3px 0 0 10px;
   }
@@ -14,9 +15,9 @@ const StyledNoReviews = styled.p`
 
 function NoReviews() {
   return (
-    <StyledNoReviews>
+    <NoReviewsWrapper>
       no reviews <ImCrying />
-    </StyledNoReviews>
+    </NoReviewsWrapper>
   );
 }
 
