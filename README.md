@@ -7,7 +7,7 @@ React JS Fundamentals Course
 <br/>
 
 ## ✍️ The Record of Study
-
+[👉 보러가기](https://github.com/eunnbi/movie-app/blob/main/STUDY.md)
 
 ## 🔨 Tech Stack
 <img alt="Javascript" src ="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&logo=JavaScript&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/>
