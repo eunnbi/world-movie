@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Loading from "../components/common/Loading";
-import SectionTitle from "../components/HomeSection/SectionTitle";
-import HomeMovieList from "../components/HomeSection/HomeMovieList";
+import SectionTitle from "../components/Home/SectionTitle";
+import HomeMovieList from "../components/Home/HomeMovieList";
 import { moviesContext } from "../contexts/movies";
 import { useCloseNav, useScroll } from "../hooks";
 
