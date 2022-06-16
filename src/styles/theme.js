@@ -2,6 +2,7 @@ const color = {
   skyBlue: "#49a6e9",
   darkBlue: "#073763",
   blueBlack: "#112a42",
+  gray: "#55595c",
 };
 
 const deviceSizes = {
