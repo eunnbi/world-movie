@@ -1,4 +1,4 @@
-# Movie App
+# World Movie 🌎🎥
 React JS Fundamentals Course
 - Provide World Movie Information: Popular, Top Rated, Now Playing
 - Search Movies
