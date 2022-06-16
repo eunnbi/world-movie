@@ -7,7 +7,7 @@ const Button = styled.button`
   text-transform: capitalize;
   padding: 0.4rem 0.6rem;
   border-radius: 5px;
-  margin-top: 3rem;
+  margin-top: 2rem;
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: ${({ theme }) => theme.color.blueBlack};
