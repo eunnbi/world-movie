@@ -6,9 +6,6 @@ React JS Fundamentals Course
 
 <br/>
 
-## ✍️ The Record of Study
-[👉 보러가기](https://github.com/eunnbi/movie-app/blob/main/STUDY.md)
-
 ## 🔨 Tech Stack
 <img alt="Javascript" src ="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&logo=JavaScript&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/>
 <img alt="React-Router" src ="https://img.shields.io/badge/React Router-CA4245.svg?&logo=React Router&logoColor=white"/>
@@ -16,3 +13,8 @@ React JS Fundamentals Course
 <img alt="Styled-Component" src ="https://img.shields.io/badge/Styled Components-DB7093.svg?&logo=styled-components&logoColor=white"/>
 <img alt="Sass" src ="https://img.shields.io/badge/Sass-CC6699.svg?&logo=Sass&logoColor=white"/>
 <img alt="Github Pages" src ="https://img.shields.io/badge/GitHub Pages-222222.svg?&logo=GitHub&logoColor=white"/>
+
+<br/>
+
+## ✍️ Study
+> [📚 Go to see the record of study](https://github.com/eunnbi/movie-app/blob/main/STUDY.md)
