@@ -4,7 +4,7 @@ import styled from "styled-components";
 const FormWrapper = styled.section`
   margin-bottom: 50px;
   h1 {
-    color: #112a42;
+    color: ${({ theme }) => theme.color.blueBlack};
     margin-bottom: 25px;
   }
 `;

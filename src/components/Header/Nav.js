@@ -19,15 +19,15 @@ const Anchor = styled(NavLink)`
   margin: 0 2rem;
   display: block;
   font-size: 1.2rem;
-  color: #073763;
+  color: ${({ theme }) => theme.color.darkBlue};
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: #49a6e9;
+    color: ${({ theme }) => theme.color.skyBlue};
   }
   &.active {
-    color: #49a6e9;
+    color: ${({ theme }) => theme.color.skyBlue};
   }
   @media ${({ theme }) => theme.device.laptop} {
     margin: 0;
