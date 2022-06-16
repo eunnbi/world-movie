@@ -1,41 +1,62 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 const FAVORITES_KEY = "favorites";
 const favoritesStateContext = createContext([]);
 const favoritesDispatchContext = createContext({
-    addFavoriteMovie: () => {},
-    removeFavoriteMovie: () => {}
+  addFavoriteMovie: (movie) => {},
+  removeFavoriteMovie: (id) => {},
 });
 
-function FavoritesProvider({children}){
-    const [favoriteMovies, setFavoriteMovies] = useState([]);
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SET":
+      return action.data;
+    case "ADD":
+      return state.concat(action.movie);
+    case "REMOVE":
+      return state.filter((item) => item.id !== action.id);
+  }
+};
 
-    const addFavoriteMovie = (movie) => {
-        setFavoriteMovies(favoriteMovies.concat(movie));
-    }
+function FavoritesProvider({ children }) {
+  const [favorites, dispatch] = useReducer(reducer, []);
 
-    const removeFavoriteMovie = (id) => {
-        setFavoriteMovies(favoriteMovies.filter(favorite => favorite.id !== id));
-    }
+  const addFavoriteMovie = (movie) => {
+    dispatch({
+      type: "ADD",
+      movie,
+    });
+  };
 
-    useEffect(() => {
-        const data = JSON.parse(localStorage.getItem(FAVORITES_KEY));
-        if (data) setFavoriteMovies(data);
-    }, []);
-    
-    useEffect(() => {
-        localStorage.setItem(FAVORITES_KEY, JSON.stringify(favoriteMovies));
-    }, [favoriteMovies]);
+  const removeFavoriteMovie = (id) => {
+    dispatch({
+      type: "REMOVE",
+      id,
+    });
+  };
 
-    const dispatch = { addFavoriteMovie, removeFavoriteMovie };
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem(FAVORITES_KEY));
+    if (data)
+      dispatch({
+        type: "SET",
+        data,
+      });
+  }, []);
 
-    return (
-        <favoritesStateContext.Provider value={favoriteMovies}>
-            <favoritesDispatchContext.Provider value={dispatch}>
-                {children}   
-            </favoritesDispatchContext.Provider>
-        </favoritesStateContext.Provider>
-    );
+  useEffect(() => {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+  }, [favorites]);
+
+  const func = { addFavoriteMovie, removeFavoriteMovie };
+
+  return (
+    <favoritesStateContext.Provider value={favorites}>
+      <favoritesDispatchContext.Provider value={func}>
+        {children}
+      </favoritesDispatchContext.Provider>
+    </favoritesStateContext.Provider>
+  );
 }
 
-export {favoritesStateContext, favoritesDispatchContext, FavoritesProvider};
+export { favoritesStateContext, favoritesDispatchContext, FavoritesProvider };
