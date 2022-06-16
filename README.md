@@ -18,6 +18,10 @@ React JS Fundamentals Course
 <img alt="Sass" src ="https://img.shields.io/badge/Sass-CC6699.svg?&logo=Sass&logoColor=white"/>
 <img alt="Github Pages" src ="https://img.shields.io/badge/GitHub Pages-222222.svg?&logo=GitHub&logoColor=white"/>
 
+> 👀 **Tech Stack 변경 사항**
+> 
+> - `Redux` & `Redux Thunk` => `React Query`
+
 <br/>
 
 ## ✍️ Study
