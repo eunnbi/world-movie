@@ -1,7 +1,7 @@
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import styled from "styled-components";
 
-const LikeButton = styled.button`
+const Button = styled.button`
   color: #a20100;
   position: absolute;
   right: 10px;
@@ -12,12 +12,10 @@ const LikeButton = styled.button`
   z-index: 1;
 `;
 
-function LikeHeart({ like, onLike }) {
+function LikeButton({ like, onLike }) {
   return (
-    <LikeButton onClick={onLike}>
-      {like ? <FaHeart /> : <FaRegHeart />}
-    </LikeButton>
+    <Button onClick={onLike}>{like ? <FaHeart /> : <FaRegHeart />}</Button>
   );
 }
 
-export default LikeHeart;
+export default LikeButton;
