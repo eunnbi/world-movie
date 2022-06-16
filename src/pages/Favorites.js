@@ -6,24 +6,24 @@ import styled from "styled-components";
 import Heading from "../components/common/Heading";
 
 const FavoritesMain = styled.main`
-    padding-top: 100px;
-    margin: 110px 0;
-    h1{
-        text-transform: capitalize;
-        text-align: center;
-        margin-bottom: 80px;
-    }
-`
+  padding-top: 2rem;
+  margin: 110px 0 3rem;
+  h1 {
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+`;
 
-function Favorites(){
-    useCloseNav();
-    const favoriteMovies = useContext(favoritesStateContext);
-    return (
-        <FavoritesMain>
-            <Heading size={40}>Your Favorite Movies 💖</Heading>
-            <MovieList movies={favoriteMovies}/>
-        </FavoritesMain>
-    );
+function Favorites() {
+  useCloseNav();
+  const favoriteMovies = useContext(favoritesStateContext);
+  return (
+    <FavoritesMain>
+      <Heading size={40}>Your Favorite Movies 💖</Heading>
+      <MovieList movies={favoriteMovies} />
+    </FavoritesMain>
+  );
 }
 
 export default Favorites;
