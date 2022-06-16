@@ -7,6 +7,7 @@ import styled from "styled-components";
 
 const FavoritesMain = styled.main`
   padding-top: 2.6rem;
+  padding-bottom: 3.5rem;
   h1 {
     text-transform: capitalize;
     text-align: center;
