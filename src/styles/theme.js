@@ -1,3 +1,9 @@
+const color = {
+  skyBlue: "#49a6e9",
+  darkBlue: "#073763",
+  blueBlack: "#112a42",
+};
+
 const deviceSizes = {
   mobile: "375px",
   tablet: "768px",
@@ -12,6 +18,7 @@ const device = {
 
 const theme = {
   device,
+  color,
 };
 
 export default theme;
