@@ -1,3 +1,5 @@
+@import "./styles/media.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -46,16 +48,30 @@ a {
   color: inherit;
 }
 
-.no-poster {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-  min-width: 260px;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.5);
-  text-transform: uppercase;
+main {
+  padding-top: 4rem;
+  width: 80vw;
+  max-width: 1100px;
+  margin: 6rem auto 0;
+}
+
+section {
+  margin-bottom: 7rem;
+}
+
+img {
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+@include mobile {
+  html {
+    font-size: 8px;
+  }
+}
+
+@include tablet {
+  html {
+    font-size: 12px;
+  }
 }
