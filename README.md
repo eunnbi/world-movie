@@ -1,7 +1,6 @@
 # Movie App
 React JS Fundamentals Course
-- Introduce Various Movies
-  -  Popular, Top Rated, Now Playing
+- Introduce Various Movies: Popular, Top Rated, Now Playing
 - Search Movies
 - Movie Favorites
 
