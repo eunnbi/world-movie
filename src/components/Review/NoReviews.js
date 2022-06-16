@@ -7,7 +7,7 @@ const StyledNoReviews = styled.p`
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  .icon {
+  svg {
     margin: 3px 0 0 10px;
   }
 `;
@@ -15,7 +15,7 @@ const StyledNoReviews = styled.p`
 function NoReviews() {
   return (
     <StyledNoReviews>
-      no reviews <ImCrying className="icon" />
+      no reviews <ImCrying />
     </StyledNoReviews>
   );
 }
