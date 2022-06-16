@@ -9,7 +9,7 @@ const GenresList = styled.ul`
 
 const GenresItem = styled.li`
   background-color: #fff;
-  color: #55595c;
+  color: ${({ theme }) => theme.color.gray};
   padding: 0.3rem 0.6rem;
   border-radius: 5px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
