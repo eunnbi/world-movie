@@ -1,12 +1,16 @@
 # World Movie 🌎🎥
+
 React JS Fundamentals Course
-- Provide World Movie Information: Popular, Top Rated, Now Playing
+
+- Provide World Movie Information
+  - Popular, Top Rated, Now Playing
 - Search Movies
 - Movie Favorites
 
 <br/>
 
 ## 🔨 Tech Stack
+
 <img alt="Javascript" src ="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&logo=JavaScript&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB.svg?&logo=React&logoColor=white"/>
 <img alt="React-Router" src ="https://img.shields.io/badge/React Router-CA4245.svg?&logo=React Router&logoColor=white"/>
 <img alt="React-Query" src ="https://img.shields.io/badge/React Query-FF4154.svg?&logo=React Query&logoColor=white"/>
@@ -17,4 +21,5 @@ React JS Fundamentals Course
 <br/>
 
 ## ✍️ Study
+
 > [📚 Go to see the record of study](https://github.com/eunnbi/movie-app/blob/main/STUDY.md)
