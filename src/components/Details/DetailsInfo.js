@@ -16,7 +16,6 @@ const DetailHeading = styled.div`
 
 const Overview = styled.p`
   opacity: 0.9;
-  max-width: 35em;
   font-size: 1.2rem;
   line-height: 2.3rem;
 `;
