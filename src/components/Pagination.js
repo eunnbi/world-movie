@@ -17,14 +17,14 @@ const Button = styled.button`
   flex-basis: 34px;
   transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: #49a6e9;
+    background-color: ${({ theme }) => theme.color.skyBlue};
   }
   &[disabled] {
     cursor: auto;
     background: rgba(0, 0, 0, 0.5);
   }
   &[aria-current] {
-    background-color: #49a6e9;
+    background-color: ${({ theme }) => theme.color.skyBlue};
   }
 `;
 
