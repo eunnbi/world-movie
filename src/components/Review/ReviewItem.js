@@ -19,6 +19,7 @@ const StyledReviewItem = styled.li`
 const Content = styled.p`
   opacity: 0.9;
   line-height: 1.5;
+  word-break: keep-all;
   a {
     text-decoration: underline;
   }
