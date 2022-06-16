@@ -5,13 +5,14 @@ import styled from "styled-components";
 const StyledLogo = styled(Link)`
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
+  flex-wrap: wrap;
 `;
 
 const LogoColumn = styled.div`
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 1.5em;
   span {
     margin-bottom: 3px;
   }
