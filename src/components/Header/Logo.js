@@ -12,7 +12,7 @@ const StyledLogo = styled(Link)`
 const LogoColumn = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   span {
     margin-bottom: 3px;
   }
@@ -21,9 +21,7 @@ const LogoColumn = styled.div`
 function Logo() {
   return (
     <StyledLogo to="/">
-      <Heading level={1} size={33}>
-        WORLD MOVIE
-      </Heading>
+      <Heading>WORLD MOVIE</Heading>
       <LogoColumn>
         🌎 <span>🎥</span>
       </LogoColumn>
