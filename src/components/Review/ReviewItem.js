@@ -19,6 +19,9 @@ const StyledReviewItem = styled.li`
 const Content = styled.p`
   opacity: 0.9;
   line-height: 1.5;
+  a {
+    text-decoration: underline;
+  }
   ${({ close }) =>
     close &&
     css`
@@ -42,6 +45,7 @@ function ReviewItem({ text, username }) {
   const ref = useRef();
 
   useEffect(() => {
+    ref.current.innerHTML = text;
     if (ref.current.scrollHeight > 72) {
       setShow(true);
     }
@@ -49,9 +53,7 @@ function ReviewItem({ text, username }) {
 
   return (
     <StyledReviewItem>
-      <Content close={!open} ref={ref}>
-        {text}
-      </Content>
+      <Content close={!open} ref={ref} />
       {show && (
         <Toggle onClick={setOpen}>{open ? "show less" : "read more"}</Toggle>
       )}
