@@ -16,7 +16,7 @@ const DetailRow = styled.div`
   display: flex;
   gap: 2rem;
   margin-bottom: 6rem;
-  @media ${({ theme }) => theme.device.tablet} {
+  @media screen and (max-width: 600px) {
     flex-direction: column;
   }
 `;
