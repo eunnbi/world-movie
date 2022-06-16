@@ -1,4 +1,5 @@
-# World Movie 🌎🎥
+# World Movie ✨
+> Find Your Favorite Movie~ 👀🌎🎥
 
 React JS Fundamentals Course
 
