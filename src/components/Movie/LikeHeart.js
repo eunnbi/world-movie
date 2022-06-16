@@ -6,7 +6,7 @@ const LikeButton = styled.button`
   position: absolute;
   right: 10px;
   top: 10px;
-  font-size: 30px;
+  font-size: 2rem;
   background-color: transparent;
   font-weight: bold;
   z-index: 1;
