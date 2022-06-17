@@ -5,6 +5,7 @@ React JS Fundamentals Course
 
 - Provide World Movie Information
   - Popular, Top Rated, Now Playing
+  - using TMDB api
 - Search Movies
 - Movie Favorites
 
