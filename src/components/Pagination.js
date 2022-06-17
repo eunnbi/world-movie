@@ -12,9 +12,9 @@ const StyledPagination = styled.nav`
 const Button = styled.button`
   color: #fff;
   background: #000;
-  padding: 10px;
+  padding: 0.7rem;
   border-radius: 5px;
-  flex-basis: 34px;
+  flex-basis: 2rem;
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: ${({ theme }) => theme.color.skyBlue};
