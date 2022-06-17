@@ -68,6 +68,9 @@ img {
   html {
     font-size: 8px;
   }
+  section {
+    margin-bottom: 5rem;
+  }
 }
 
 @include tablet {
