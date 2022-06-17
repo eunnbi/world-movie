@@ -1,11 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { MoviesProvider } from "./contexts/movies";
 import { FavoritesProvider } from "./contexts/favorites";
 import Header from "./components/Header";
 import Loading from "./components/common/Loading";
+import NotFound from "./pages/NotFound";
 import loadable from "@loadable/component";
-import { QueryClient, QueryClientProvider } from "react-query";
+
 import theme from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 const Home = loadable(() => import("./pages/Home"));
@@ -32,6 +34,7 @@ function App() {
                     <Route path="/favorites" element={<Favorites />} />
                   </Route>
                   <Route path="/movie/:id" element={<Details />} />
+                  <Route path="/*" element={<NotFound />} />
                 </Routes>
               </Suspense>
             </BrowserRouter>
