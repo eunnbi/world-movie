@@ -6,8 +6,8 @@ const color = {
 };
 
 const deviceSizes = {
-  mobile: "375px",
-  tablet: "768px",
+  mobile: "400px",
+  tablet: "820px",
   laptop: "900px",
 };
 
