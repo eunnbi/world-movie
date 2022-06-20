@@ -39,3 +39,5 @@
 <br/>
 
 ## 📱 Responsive Web
+- [viewport와 media query](https://velog.io/@eunnbi/responsive-web-1)
+- [vw, vh, vmin, vmax, em, rem 속성](https://velog.io/@eunnbi/responsive-web-2)
