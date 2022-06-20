@@ -14,8 +14,7 @@
   - 각 페이지 컴포넌트에서 스크롤을 맨 위로 이동시키는 로직이 필요했기에 `useScroll` 커스텀 훅을 만들었다.
 - [useCloseNav](https://github.com/eunnbi/movie-app/blob/main/src/hooks/useCloseNav.js) ❌
   -  페이지를 이동하고 페이지 컴포넌트가 렌더링될 때 아래로 펼쳐진 Nav 컴포넌트를 다시 숨겨야 하는 로직이 필요했다.
-  -  하지만 Nav 컴포넌트 펼침/숨김 여부를 결정하는 `showNav` 상태값와 `setShowNav` 함수는 [Header](https://github.com/eunnbi/movie-app/blob/main/src/components/Header/index.js#L57) 컴포넌트 내에 있었고 이를 `useCloseNav` 커스텀 훅에서 사용하기 위해 `useOutletContext`를 이용했다.
-> 👍 [React Router 공식문서 - useOutletContext](https://reactrouter.com/docs/en/v6/hooks/use-outlet-context)
+  -  하지만 Nav 컴포넌트 펼침/숨김 여부를 결정하는 `showNav` 상태값와 `setShowNav` 함수는 [Header](https://github.com/eunnbi/movie-app/blob/main/src/components/Header/index.js#L57) 컴포넌트 내에 있었고 이를 `useCloseNav` 커스텀 훅에서 사용하기 위해 [`useOutletContext`](https://reactrouter.com/docs/en/v6/hooks/use-outlet-context)를 이용했다.
 
 #### Custom Hook을 만들어 복잡한 컴포넌트 로직을 분리할 수 있다.
 - [useLike](https://github.com/eunnbi/movie-app/blob/main/src/hooks/useLike.js) 💜
