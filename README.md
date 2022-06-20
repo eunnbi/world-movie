@@ -22,7 +22,7 @@ React JS Fundamentals Course
 
 > 🙌 **Tech Stack 변경 사항**
 > 
-> `Redux` & `Redux Thunk` 대신 `React Query` 사용
+> `Redux` & `Redux Thunk` ➡️ `React Query`
 
 <br/>
 
