@@ -30,6 +30,7 @@
 <br/>
 
 ## 🧩 Code spliting
+> ✍️ [velog - code spliting](https://velog.io/@eunnbi/React-code-spliting)
 
 <br/>
 
