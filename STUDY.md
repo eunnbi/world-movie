@@ -30,7 +30,8 @@
 <br/>
 
 ## 🧩 Code spliting
-> ✍️ [velog - code spliting](https://velog.io/@eunnbi/React-code-spliting)
+- ✍️ [velog - code spliting](https://velog.io/@eunnbi/React-code-spliting) <br/>
+- [`Loadable Components`를 이용한 code spliting 적용](https://github.com/eunnbi/movie-app/blob/main/src/App.js#L13)
 
 <br/>
 
