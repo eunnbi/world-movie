@@ -1,4 +1,4 @@
-# ⚛️ React Study
+# React Study ⚛️
 
 ## 🪝 Custom Hook
 > ✍️ [velog - custom hook](https://velog.io/@eunnbi/Custom-Hook)
