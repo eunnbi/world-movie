@@ -37,6 +37,17 @@
 ## 🌸 React Query
 - [React Query (feat. 우아한 테크 세미나)](https://velog.io/@eunnbi/React-Query-feat.-%EC%9A%B0%EC%95%84%ED%95%9C-%ED%85%8C%ED%81%AC-%EC%84%B8%EB%AF%B8%EB%82%98)
 
+#### 🔑 Query Key의 중요성
+- React Query는 `Query Key`에 따라 `Query Caching`을 관리한다.
+- `Query Key`가 변경될 때마다 자동으로 `refetch`된다.
+- `Query Function`에 자동으로 `context` 객체 인자가 들어오는데 이 객체에 `queryKey`라는 키가 있다.
+  => `Query Function`에서 `api`를 호출할 때 `Query Key`를 사용할 수 있다.
+  
+**Example**
+- [Search Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Search.js#L25) : `Query Key`에 `state`를 포함하여 상태값이 업데이트될 때마다 query가 자동으로 `refetch`된다.
+- [Detail Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L29) : `useQueries` 이용
+- [queryFn 모음](https://github.com/eunnbi/movie-app/blob/main/src/lib/api.js#L12) : `queryKey` 사용
+
 <br/>
 
 ## 📱 Responsive Web
