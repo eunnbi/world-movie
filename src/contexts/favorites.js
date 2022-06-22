@@ -9,8 +9,6 @@ export const favoritesDispatchContext = createContext({
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SET":
-      return action.data;
     case "ADD":
       return state.concat(action.movie);
     case "REMOVE":
