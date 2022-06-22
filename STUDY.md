@@ -25,7 +25,8 @@
 <br/>
 
 ## 🌐 Context API (with localStorage)
-- [Context API 기본 개념](https://velog.io/@eunnbi/React-Context-API)
+- [velog - Context API 기본 개념](https://velog.io/@eunnbi/React-Context-API)
+- [velog - 동적 Context API](https://velog.io/@eunnbi/React-%EB%8F%99%EC%A0%81-Context-API)
 
 <br/>
 
