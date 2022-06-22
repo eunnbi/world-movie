@@ -1,8 +1,8 @@
 import { createContext, useEffect, useReducer } from "react";
 
 const FAVORITES_KEY = "favorites";
-const favoritesStateContext = createContext([]);
-const favoritesDispatchContext = createContext({
+export const favoritesStateContext = createContext([]);
+export const favoritesDispatchContext = createContext({
   addFavoriteMovie: (movie) => {},
   removeFavoriteMovie: (id) => {},
 });
@@ -19,7 +19,10 @@ const reducer = (state, action) => {
 };
 
 function FavoritesProvider({ children }) {
-  const [favorites, dispatch] = useReducer(reducer, []);
+  const [favorites, dispatch] = useReducer(reducer, [], () => {
+    const data = JSON.parse(localStorage.getItem(FAVORITES_KEY));
+    return data ? data : [];
+  });
 
   const addFavoriteMovie = (movie) => {
     dispatch({
@@ -36,27 +39,18 @@ function FavoritesProvider({ children }) {
   };
 
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem(FAVORITES_KEY));
-    if (data)
-      dispatch({
-        type: "SET",
-        data,
-      });
-  }, []);
-
-  useEffect(() => {
     localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
   }, [favorites]);
 
-  const func = { addFavoriteMovie, removeFavoriteMovie };
+  const value = { addFavoriteMovie, removeFavoriteMovie };
 
   return (
     <favoritesStateContext.Provider value={favorites}>
-      <favoritesDispatchContext.Provider value={func}>
+      <favoritesDispatchContext.Provider value={value}>
         {children}
       </favoritesDispatchContext.Provider>
     </favoritesStateContext.Provider>
   );
 }
 
-export { favoritesStateContext, favoritesDispatchContext, FavoritesProvider };
+export default FavoritesProvider;
