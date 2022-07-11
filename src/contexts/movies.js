@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getMovies } from "../lib/api";
 
-const MOVIE_TYPE = ["popular", "top_rated", "now_playing"];
+const MOVIE_TYPE = ["now_playing", "popular", "top_rated"];
 
 export const moviesContext = createContext({
   loading: false,
@@ -13,9 +13,9 @@ export const moviesContext = createContext({
 const MoviesProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState({
-    popular: [],
-    top_rated: [],
     now_playing: [],
+    top_rated: [],
+    popular: [],
   });
   const value = {
     loading,
