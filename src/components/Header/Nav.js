@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { NAV } from "../../constant/nav";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const StyledNav = styled.nav`
   background-color: #fff;
@@ -38,6 +37,24 @@ const Anchor = styled(NavLink)`
     }
   }
 `;
+
+const NAV = [
+  {
+    id: 1,
+    to: "/",
+    text: "Home",
+  },
+  {
+    id: 2,
+    to: "/search?query=",
+    text: "Search",
+  },
+  {
+    id: 3,
+    to: "/favorites",
+    text: "Favorites",
+  },
+];
 
 function Nav({ showNav }) {
   return (
