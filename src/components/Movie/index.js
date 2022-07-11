@@ -16,7 +16,6 @@ const Movie = ({ movie }) => {
   const { search, pathname } = useLocation();
   const {
     title,
-    original_title: originalTitle,
     poster_path: poster,
     id,
     vote_average: rating,
@@ -33,7 +32,6 @@ const Movie = ({ movie }) => {
         <MoviePoster poster={poster} />
         <MovieInfo
           title={title}
-          originalTitle={originalTitle}
           year={parseInt(movie.release_date)}
           rating={rating}
           language={getLanguage(original_language).english_name}

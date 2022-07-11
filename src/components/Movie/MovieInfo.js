@@ -30,18 +30,11 @@ const Rating = styled.p`
   }
 `;
 
-function MovieInfo({ title, originalTitle, year, rating, language, ...props }) {
+function MovieInfo({ title, year, rating, language, ...props }) {
   return (
     <StyledMovieInfo {...props}>
       <div>
-        <Heading level={4}>
-          {title}
-          {title !== originalTitle && (
-            <>
-              <br />({originalTitle})
-            </>
-          )}
-        </Heading>
+        <Heading level={4}>{title}</Heading>
       </div>
       <MovieInfoRow>
         <div>
