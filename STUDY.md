@@ -10,6 +10,7 @@
   - [Details Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L34)와 [Home Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Home.js#L10)에서 스크롤을 맨 위에 두지 않은 상태에서 다른 페이지에서 이동하고 오면 스크롤이 그 상태를 유지하고 있어서 페이지가 처음 렌더링된 이후에 스크롤을 맨 위로 이동시키는 작업이 필요하다.
     - `useScroll([])`
   - [Movies Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Movies.js#L22)는 페이지네이션으로 구현되었는데 페이지 번호를 이동할 때마다 스크롤이 맨 위로 이동해야 한다.
+    - `useScroll([page])` 
 
 #### Custom Hook을 만들어 복잡한 컴포넌트 로직을 분리할 수 있다.
 - [useLike](https://github.com/eunnbi/movie-app/blob/main/src/hooks/useLike.js) 💜
