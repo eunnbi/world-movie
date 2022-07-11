@@ -1,5 +1,4 @@
 import Heading from "../common/Heading";
-import BackButton from "./BackButton";
 import Genres from "./Genres";
 import VideoLink from "./VideoLink";
 import styled from "styled-components";
