@@ -26,7 +26,7 @@ const DetailRow = styled.div`
       width: 85vw;
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 650px) {
     flex-direction: column;
   }
 `;
