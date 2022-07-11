@@ -1,21 +1,14 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import LikeButton from "./LikeButton";
 import MoviePoster from "./MoviePoster";
 import MovieInfo from "./MovieInfo";
-import { favoritesStateContext } from "../../contexts/favorites";
 import { useLike } from "../../hooks/useLike";
 import styled from "styled-components";
 
 const MovieLink = styled(Link)`
   display: block;
   position: relative;
-  overflow: hidden;
-  height: 100%;
-  &:hover .MovieInfo {
-    visibility: visible;
-    transform: translateY(0);
-  }
 `;
 
 const Movie = ({ movie }) => {
@@ -41,7 +34,6 @@ const Movie = ({ movie }) => {
           originalTitle={originalTitle}
           year={parseInt(movie.release_date)}
           rating={rating}
-          className="MovieInfo"
         />
       </MovieLink>
     </li>
