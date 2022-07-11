@@ -19,6 +19,7 @@ const Image = styled.img`
 
 const NoPoster = styled.div`
   ${posterStyle}
+  min-height: 300px;
   background-color: white;
   font-size: 1.5rem;
   display: flex;
