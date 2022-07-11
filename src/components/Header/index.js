@@ -51,10 +51,10 @@ function Header() {
             <Logo />
             <NavToggleBtn setShowNav={setShowNav} />
           </div>
-          <Nav showNav={showNav} />
+          <Nav showNav={showNav} setShowNav={setShowNav} />
         </div>
       </HeaderWrapper>
-      <Outlet context={[showNav, setShowNav]} />
+      <Outlet />
     </>
   );
 }
