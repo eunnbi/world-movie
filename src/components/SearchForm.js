@@ -19,12 +19,12 @@ const Input = styled.input`
   font-size: 20px;
 `;
 
-function SearchForm({ query, onSearch }) {
+function SearchForm({ keyword, onSearch }) {
   return (
     <FormWrapper>
       <Heading>Search Movies</Heading>
       <form>
-        <Input type="text" value={query} onChange={onSearch} />
+        <Input type="text" value={keyword} onChange={onSearch} />
       </form>
     </FormWrapper>
   );
