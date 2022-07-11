@@ -27,11 +27,7 @@ const Movie = ({ movie }) => {
     id,
     vote_average: rating,
   } = movie;
-  const favoriteMovies = useContext(favoritesStateContext);
-  const { like, setLike, onLike } = useLike(false, movie);
-  useEffect(() => {
-    favoriteMovies.forEach((movie) => movie.id === id && setLike(true));
-  }, []);
+  const { like, onLike } = useLike(movie);
 
   return (
     <li>
