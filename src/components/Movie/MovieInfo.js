@@ -16,8 +16,8 @@ const MovieInfoRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .year {
-    font-size: 13px;
+  span {
+    font-size: 0.8rem;
   }
 `;
 
@@ -30,7 +30,7 @@ const Rating = styled.p`
   }
 `;
 
-function MovieInfo({ title, originalTitle, year, rating, ...props }) {
+function MovieInfo({ title, originalTitle, year, rating, language, ...props }) {
   return (
     <StyledMovieInfo {...props}>
       <div>
@@ -44,7 +44,10 @@ function MovieInfo({ title, originalTitle, year, rating, ...props }) {
         </Heading>
       </div>
       <MovieInfoRow>
-        <p className="year">{!isNaN(year) && year}</p>
+        <div>
+          <span>{!isNaN(year) && year}</span>
+          {language && <span> | {language}</span>}
+        </div>
         {rating !== 0 && (
           <Rating>
             <AiFillStar />
