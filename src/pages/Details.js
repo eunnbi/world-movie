@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useQueries } from "react-query";
 import Loading from "../components/common/Loading";
+import Heading from "../components/common/Heading";
 import MoviePoster from "../components/Movie/MoviePoster";
 import DetailsInfo from "../components/Details/DetailsInfo";
 import ReviewSection from "../components/Review/ReviewSection";
@@ -17,8 +18,14 @@ const DetailMain = styled.main`
 const DetailRow = styled.div`
   display: flex;
   gap: 2rem;
-  margin-bottom: 6rem;
+  margin: 2rem 0 4rem;
   align-items: flex-start;
+  @media ${({ theme }) => theme.device.tablet} {
+    > img {
+      max-width: 300px;
+      width: 85vw;
+    }
+  }
   @media screen and (max-width: 600px) {
     flex-direction: column;
   }
@@ -52,6 +59,10 @@ const Details = () => {
   return (
     <DetailMain>
       <BackButton />
+      <Heading>{details.title}</Heading>
+      {details.title !== details.original_title && (
+        <Heading level={3}>{details.original_title}</Heading>
+      )}
       <DetailRow>
         <MoviePoster poster={details.poster_path} />
         <DetailsInfo details={details} />
