@@ -5,6 +5,7 @@ import MoviePoster from "./MoviePoster";
 import MovieInfo from "./MovieInfo";
 import { useLike } from "../../hooks/useLike";
 import styled from "styled-components";
+import { getLanguage } from "../../utils";
 
 const MovieLink = styled(Link)`
   display: block;
@@ -19,6 +20,7 @@ const Movie = ({ movie }) => {
     poster_path: poster,
     id,
     vote_average: rating,
+    original_language,
   } = movie;
   const { like, onLike } = useLike(movie);
 
@@ -34,6 +36,7 @@ const Movie = ({ movie }) => {
           originalTitle={originalTitle}
           year={parseInt(movie.release_date)}
           rating={rating}
+          language={getLanguage(original_language).english_name}
         />
       </MovieLink>
     </li>
