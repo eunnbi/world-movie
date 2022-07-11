@@ -28,7 +28,7 @@
 - [velog - Context API 기본 개념](https://velog.io/@eunnbi/React-Context-API)
 - [velog - 동적 Context API](https://velog.io/@eunnbi/React-%EB%8F%99%EC%A0%81-Context-API)
 - [`src/contexts/favorites.js`](https://github.com/eunnbi/movie-app/blob/main/src/contexts/favorites.js)
-  - [Favorites](https://github.com/eunnbi/movie-app/blob/main/src/pages/Favorites.js#L20) page 컴포넌트와 [Movie](https://github.com/eunnbi/movie-app/blob/main/src/components/Movie/index.js#L29) 컴포넌트에서 공통적으로 즐겨찾기한 영화 배열 상태값(`favoriteMovies`)이 필요한데 최상위 컴포넌트에서 `props`로 전달하기에는 매우 비효율적이라 생각하여 `Context API` 이용
+  - [Favorites page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Favorites.js#L20) 컴포넌트와 [Movie](https://github.com/eunnbi/movie-app/blob/main/src/components/Movie/index.js#L29) 컴포넌트에서 공통적으로 즐겨찾기한 영화 배열 상태값(`favoriteMovies`)이 필요한데 최상위 컴포넌트에서 `props`로 전달하기에는 매우 비효율적이라 생각하여 `Context API` 이용
   - `useReducer`를 이용하여 동적 Context API 구현
   - `localStorage API`를 함께 사용
 
