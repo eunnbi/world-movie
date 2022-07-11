@@ -4,7 +4,7 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w342";
 
 const posterStyle = css`
   height: 100%;
-  max-width: 300px;
+  max-width: 350px;
   @media ${({ theme }) => theme.device.tablet} {
     width: 200px;
   }
