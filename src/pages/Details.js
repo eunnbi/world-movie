@@ -18,6 +18,7 @@ const DetailRow = styled.div`
   display: flex;
   gap: 2rem;
   margin-bottom: 6rem;
+  align-items: flex-start;
   @media screen and (max-width: 600px) {
     flex-direction: column;
   }
