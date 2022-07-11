@@ -7,9 +7,11 @@ import ReviewSection from "../components/Review/ReviewSection";
 import { getDetails, getReviews } from "../lib/api";
 import { useScroll } from "../hooks";
 import styled from "styled-components";
+import BackButton from "../components/Details/BackButton";
 
 const DetailMain = styled.main`
   margin-top: 0;
+  padding-top: 0;
 `;
 
 const DetailRow = styled.div`
@@ -27,10 +29,19 @@ const Details = () => {
     { isLoading: detailsLoading, data: details },
     { isLoading: reviewsLoading, data: reviews },
   ] = useQueries([
-    { queryKey: ["details", id], queryFn: getDetails },
-    { queryKey: ["reviews", id], queryFn: getReviews },
+    {
+      queryKey: ["details", id],
+      queryFn: getDetails,
+      refetchOnWindowFocus: false,
+    },
+    {
+      queryKey: ["reviews", id],
+      queryFn: getReviews,
+      refetchOnWindowFocus: false,
+    },
   ]);
   const loading = detailsLoading || reviewsLoading;
+
   useScroll([]);
 
   if (loading) {
@@ -39,6 +50,7 @@ const Details = () => {
 
   return (
     <DetailMain>
+      <BackButton />
       <DetailRow>
         <MoviePoster poster={details.poster_path} />
         <DetailsInfo details={details} />
