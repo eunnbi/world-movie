@@ -20,10 +20,10 @@ function BackButton() {
   const navigate = useNavigate();
   const from = useQueryParam("from");
   const page = useQueryParam("page");
-  const query = useQueryParam("query");
-  const to = `${from}${
-    page ? `?page=${page}` : query ? `?query=${query}` : ""
-  }`;
+  const keyword = useQueryParam("keyword");
+  const to = from
+    ? `${from}${page ? `?page=${page}` : keyword ? `?keyword=${keyword}` : ""}`
+    : -1;
   return (
     <Button onClick={() => navigate(to)}>
       <FiChevronLeft />
