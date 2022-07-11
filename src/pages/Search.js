@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import Loading from "../components/common/Loading";
 import MovieList from "../components/common/MovieList";
@@ -6,6 +7,7 @@ import SearchForm from "../components/SearchForm";
 import { searchMovies } from "../lib/api";
 import { useCloseNav } from "../hooks";
 import styled from "styled-components";
+import { useQueryParam } from "../hooks/useQueryParam";
 
 const SearchMain = styled.main`
   padding: 3rem 0;
@@ -21,13 +23,19 @@ const NotFound = styled.p`
 
 function Search() {
   useCloseNav();
-  const [query, setQuery] = useState("");
-  const { isLoading, data } = useQuery(["search", query], searchMovies);
-
+  const navigate = useNavigate();
+  const queryParam = useQueryParam("query");
+  const [query, setQuery] = useState(queryParam);
+  const { isLoading, data } = useQuery(["search", query], searchMovies, {
+    refetchOnWindowFocus: false,
+  });
   const onSearch = (e) => {
     setQuery(e.target.value);
   };
 
+  useEffect(() => {
+    navigate(`?query=${query}`);
+  }, [query]);
   return (
     <SearchMain>
       <SearchForm query={query} onSearch={onSearch} />
