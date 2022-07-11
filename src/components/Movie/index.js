@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LikeButton from "./LikeButton";
 import MoviePoster from "./MoviePoster";
 import MovieInfo from "./MovieInfo";
@@ -19,6 +19,7 @@ const MovieLink = styled(Link)`
 `;
 
 const Movie = ({ movie }) => {
+  const { search, pathname } = useLocation();
   const {
     title,
     original_title: originalTitle,
@@ -28,14 +29,15 @@ const Movie = ({ movie }) => {
   } = movie;
   const favoriteMovies = useContext(favoritesStateContext);
   const { like, setLike, onLike } = useLike(false, movie);
-
   useEffect(() => {
     favoriteMovies.forEach((movie) => movie.id === id && setLike(true));
   }, []);
 
   return (
     <li>
-      <MovieLink to={`/movie/${id}`}>
+      <MovieLink
+        to={`/movie/${id}${search}${search ? "&" : "?"}from=${pathname}`}
+      >
         <LikeButton like={like} onLike={onLike} />
         <MoviePoster poster={poster} />
         <MovieInfo
