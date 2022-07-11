@@ -22,24 +22,24 @@ const NotFound = styled.p`
 
 function Search() {
   const navigate = useNavigate();
-  const queryParam = useQueryParam("query");
-  const [query, setQuery] = useState(queryParam);
-  const { isLoading, data } = useQuery(["search", query], searchMovies, {
+  const queryParam = useQueryParam("keyword", "");
+  const [keyword, setKeyword] = useState(queryParam);
+  const { isLoading, data } = useQuery(["search", keyword], searchMovies, {
     refetchOnWindowFocus: false,
   });
   const onSearch = (e) => {
-    setQuery(e.target.value);
+    setKeyword(e.target.value);
   };
 
   useEffect(() => {
-    navigate(`?query=${query}`);
-  }, [query]);
+    navigate(`?keyword=${keyword}`);
+  }, [keyword]);
   return (
     <SearchMain>
-      <SearchForm query={query} onSearch={onSearch} />
+      <SearchForm keyword={keyword} onSearch={onSearch} />
       {isLoading ? (
         <Loading />
-      ) : query !== "" && data.length === 0 ? (
+      ) : keyword !== "" && data.length === 0 ? (
         <NotFound>Movie Not Found!</NotFound>
       ) : (
         <section>
