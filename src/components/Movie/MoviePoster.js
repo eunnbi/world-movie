@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w342";
 
 const posterStyle = css`
-  height: auto;
   max-width: 350px;
   @media ${({ theme }) => theme.device.tablet} {
     width: 200px;
@@ -15,11 +14,13 @@ const posterStyle = css`
 
 const Image = styled.img`
   ${posterStyle}
+  height: auto;
 `;
 
 const NoPoster = styled.div`
   ${posterStyle}
   min-height: 300px;
+  height: 100%;
   background-color: white;
   font-size: 1.5rem;
   display: flex;
