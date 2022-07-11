@@ -56,11 +56,11 @@ const NAV = [
   },
 ];
 
-function Nav({ showNav }) {
+function Nav({ showNav, setShowNav }) {
   return (
     <StyledNav showNav={showNav}>
       {NAV.map((nav) => (
-        <Anchor key={nav.id} to={nav.to}>
+        <Anchor key={nav.id} to={nav.to} onClick={setShowNav}>
           {nav.text}
         </Anchor>
       ))}
