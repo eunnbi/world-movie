@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/world-movie/static/css/main.71359f2c.css",
-    "main.js": "/world-movie/static/js/main.59218420.js",
-    "static/js/922.d9fcf8e5.chunk.js": "/world-movie/static/js/922.d9fcf8e5.chunk.js",
-    "static/js/761.46dca05a.chunk.js": "/world-movie/static/js/761.46dca05a.chunk.js",
-    "static/js/985.d25f3872.chunk.js": "/world-movie/static/js/985.d25f3872.chunk.js",
-    "static/js/650.69b2f628.chunk.js": "/world-movie/static/js/650.69b2f628.chunk.js",
-    "static/js/681.b2034d4c.chunk.js": "/world-movie/static/js/681.b2034d4c.chunk.js",
+    "main.css": "/world-movie/static/css/main.2937f90d.css",
+    "main.js": "/world-movie/static/js/main.ea9e902a.js",
+    "static/js/922.b47a1e55.chunk.js": "/world-movie/static/js/922.b47a1e55.chunk.js",
+    "static/js/761.fe11cfcb.chunk.js": "/world-movie/static/js/761.fe11cfcb.chunk.js",
+    "static/js/433.88a3c22f.chunk.js": "/world-movie/static/js/433.88a3c22f.chunk.js",
+    "static/js/650.c7c1fd38.chunk.js": "/world-movie/static/js/650.c7c1fd38.chunk.js",
+    "static/js/681.86fa9d3e.chunk.js": "/world-movie/static/js/681.86fa9d3e.chunk.js",
     "static/js/820.e176911f.chunk.js": "/world-movie/static/js/820.e176911f.chunk.js",
     "static/js/341.9041cc70.chunk.js": "/world-movie/static/js/341.9041cc70.chunk.js",
     "static/js/692.f22bbe85.chunk.js": "/world-movie/static/js/692.f22bbe85.chunk.js",
+    "static/media/youtube-icon.png": "/world-movie/static/media/youtube-icon.6f9e32ba8209c71da075.png",
     "index.html": "/world-movie/index.html",
-    "main.71359f2c.css.map": "/world-movie/static/css/main.71359f2c.css.map",
-    "main.59218420.js.map": "/world-movie/static/js/main.59218420.js.map",
-    "922.d9fcf8e5.chunk.js.map": "/world-movie/static/js/922.d9fcf8e5.chunk.js.map",
-    "761.46dca05a.chunk.js.map": "/world-movie/static/js/761.46dca05a.chunk.js.map",
-    "985.d25f3872.chunk.js.map": "/world-movie/static/js/985.d25f3872.chunk.js.map",
-    "650.69b2f628.chunk.js.map": "/world-movie/static/js/650.69b2f628.chunk.js.map",
-    "681.b2034d4c.chunk.js.map": "/world-movie/static/js/681.b2034d4c.chunk.js.map",
+    "main.2937f90d.css.map": "/world-movie/static/css/main.2937f90d.css.map",
+    "main.ea9e902a.js.map": "/world-movie/static/js/main.ea9e902a.js.map",
+    "922.b47a1e55.chunk.js.map": "/world-movie/static/js/922.b47a1e55.chunk.js.map",
+    "761.fe11cfcb.chunk.js.map": "/world-movie/static/js/761.fe11cfcb.chunk.js.map",
+    "433.88a3c22f.chunk.js.map": "/world-movie/static/js/433.88a3c22f.chunk.js.map",
+    "650.c7c1fd38.chunk.js.map": "/world-movie/static/js/650.c7c1fd38.chunk.js.map",
+    "681.86fa9d3e.chunk.js.map": "/world-movie/static/js/681.86fa9d3e.chunk.js.map",
     "820.e176911f.chunk.js.map": "/world-movie/static/js/820.e176911f.chunk.js.map",
     "341.9041cc70.chunk.js.map": "/world-movie/static/js/341.9041cc70.chunk.js.map",
     "692.f22bbe85.chunk.js.map": "/world-movie/static/js/692.f22bbe85.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71359f2c.css",
-    "static/js/main.59218420.js"
+    "static/css/main.2937f90d.css",
+    "static/js/main.ea9e902a.js"
   ]
 }
