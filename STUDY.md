@@ -7,7 +7,7 @@
 #### Custom Hook을 만들어 컴포넌트들의 중복 로직을 최소화할 수 있다!
 - [useScroll](https://github.com/eunnbi/movie-app/blob/main/src/hooks/useScroll.js) 🖱️
   - `deps`(의존성) 배열을 인자로 보내며 호출한다. 만약 의존성 배열에 있는 값이 업데이트되면 `scroll`을 맨 위로 이동시킨다.
-  - [Detail Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L34) 혹은 [Home Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Home.js#L10)에서 스크롤을 맨 위에 두지 않은 상태에서 다른 페이지에서 이동하고 오면 스크롤이 그 상태를 유지하고 있어서 페이지가 렌더링될 때 스크롤을 맨 위로 이동시키는 작업이 필요했다.
+  - [Details Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L34)와 [Home Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Home.js#L10)에서 스크롤을 맨 위에 두지 않은 상태에서 다른 페이지에서 이동하고 오면 스크롤이 그 상태를 유지하고 있어서 페이지가 렌더링될 때 스크롤을 맨 위로 이동시키는 작업이 필요했다.
     - `useScroll([])`
   - [Movies Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Movies.js#L22)는 페이지네이션으로 구현되었는데 페이지 번호를 이동할 때마다 스크롤이 맨 위로 이동해야 한다.
     - `useScroll([page])`
@@ -28,7 +28,7 @@
 - [velog - Context API 기본 개념](https://velog.io/@eunnbi/React-Context-API)
 - [velog - 동적 Context API](https://velog.io/@eunnbi/React-%EB%8F%99%EC%A0%81-Context-API)
 - [`src/contexts/favorites.js`](https://github.com/eunnbi/movie-app/blob/main/src/contexts/favorites.js)
-  - [Favorites](https://github.com/eunnbi/movie-app/blob/main/src/pages/Favorites.js#L20) page 컴포넌트와 [Movie](https://github.com/eunnbi/movie-app/blob/main/src/components/Movie/index.js#L29) 컴포넌트에서 공통적으로 즐겨찾기한 영화 배열 상태값(`favoriteMovies`)이 필요한데 최상위 컴포넌트에서 `props`로 전달하기에는 매우 비효율적이라 생각하여 `Context API` 이용
+  - [Favorites page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Favorites.js#L20) 컴포넌트와 [Movie](https://github.com/eunnbi/movie-app/blob/main/src/components/Movie/index.js#L29) 컴포넌트에서 공통적으로 즐겨찾기한 영화 배열 상태값(`favoriteMovies`)이 필요한데 최상위 컴포넌트에서 `props`로 전달하기에는 매우 비효율적이라 생각하여 `Context API` 이용
   - `useReducer`를 이용하여 동적 Context API 구현
   - `localStorage API`를 함께 사용
 
@@ -52,7 +52,7 @@
   
 **Example**
 - [Search Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Search.js#L25) : `Query Key`에 `state`를 포함하여 상태값이 업데이트될 때마다 query가 자동으로 `refetch`된다.
-- [Detail Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L29) : `useQueries` 이용
+- [Details Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L29) : `useQueries` 이용
 - [queryFn 모음](https://github.com/eunnbi/movie-app/blob/main/src/lib/api.js#L12) : `queryKey` 사용
 
 <br/>
