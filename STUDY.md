@@ -53,6 +53,14 @@
 
 <br/>
 
+## Query String으로 상태 기억하기
+- [Movies page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Movies.js)에서 [Details page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Details.js)로 이동하고 나서 다시 돌아오면 `page`상태가 초기화된다.
+- 이와 비슷하게 [Search page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Search.js)에서 [Details page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Details.js)로 이동하고 다시 돌아오면 `keyword` 상태가 초기화된다.
+- 
+
+
+<br/>
+
 ## 📱 Responsive Web
 - [viewport와 media query](https://velog.io/@eunnbi/responsive-web-1)
 - [vw, vh, vmin, vmax, em, rem 속성](https://velog.io/@eunnbi/responsive-web-2)
