@@ -52,7 +52,7 @@
   
 **Example**
 - [Search Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Search.js#L25) : `Query Key`에 `state`를 포함하여 상태값이 업데이트될 때마다 query가 자동으로 `refetch`된다.
-- [Detail Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L29) : `useQueries` 이용
+- [Details Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L29) : `useQueries` 이용
 - [queryFn 모음](https://github.com/eunnbi/movie-app/blob/main/src/lib/api.js#L12) : `queryKey` 사용
 
 <br/>
