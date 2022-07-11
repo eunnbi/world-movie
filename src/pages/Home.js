@@ -20,7 +20,7 @@ const Home = () => {
           <section key={index}>
             <SectionTitle
               title={entrie[0].replace("_", " ")}
-              path={`/movies/${entrie[0]}`}
+              path={`/movies/${entrie[0]}?page=1`}
             />
             <HomeMovieList movies={entrie[1].slice(0, 20)} />
           </section>
