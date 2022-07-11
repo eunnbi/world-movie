@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import MoviesTitle from "../components/MoviesTitle";
 import MovieList from "../components/common/MovieList";
 import Pagination from "../components/Pagination";
 import { moviesContext } from "../contexts/movies";
-import styled from "styled-components";
 import { useQueryParam } from "../hooks/useQueryParam";
+import { useScroll } from "../hooks/useScroll";
+import styled from "styled-components";
 
 const MoviesMain = styled.main`
   width: 90vw;
@@ -22,6 +23,7 @@ const Movies = () => {
   const limit = 12;
   const offset = (page - 1) * limit;
 
+  useScroll([page]);
   useEffect(() => {
     navigate(`?page=${page}`);
   }, [page]);
