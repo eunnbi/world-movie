@@ -14,7 +14,7 @@ const MoviesMain = styled.main`
 `;
 
 const Movies = () => {
-  const queryParam = useQueryParam("page");
+  const queryParam = useQueryParam("page", 1);
   const navigate = useNavigate();
   const { type } = useParams();
   const { movies } = useContext(moviesContext);
