@@ -8,13 +8,9 @@ const ToggleBtn = styled.button`
   @media ${({ theme }) => theme.device.laptop} {
     display: block;
     color: #49a6e9;
-    font-size: 30px;
+    font-size: 1.8rem;
     margin-top: 5px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      transform: rotateZ(90deg);
-    }
   }
 `;
 
