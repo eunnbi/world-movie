@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -30,13 +30,14 @@ const Button = styled.button`
 
 const Pagination = ({ total, limit, page, setPage }) => {
   const numPages = Math.ceil(total / limit);
-  const [btnNum] = useState(5);
+  const btnNum = useRef(5);
   const [offset, setOffset] = useState(0);
+
   useEffect(() => {
-    if (page > offset + btnNum) {
-      setOffset(offset + btnNum);
+    if (page > offset + btnNum.current) {
+      setOffset(offset + btnNum.current);
     } else if (page === offset) {
-      setOffset(offset - btnNum);
+      setOffset(offset - btnNum.current);
     }
   }, [page]);
 
@@ -47,7 +48,7 @@ const Pagination = ({ total, limit, page, setPage }) => {
       </Button>
       {Array(numPages)
         .fill()
-        .slice(offset, btnNum + offset)
+        .slice(offset, btnNum.current + offset)
         .map((_, i) => (
           <Button
             key={i + 1 + offset}
