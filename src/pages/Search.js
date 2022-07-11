@@ -5,9 +5,8 @@ import Loading from "../components/common/Loading";
 import MovieList from "../components/common/MovieList";
 import SearchForm from "../components/SearchForm";
 import { searchMovies } from "../lib/api";
-import { useCloseNav } from "../hooks";
-import styled from "styled-components";
 import { useQueryParam } from "../hooks/useQueryParam";
+import styled from "styled-components";
 
 const SearchMain = styled.main`
   padding: 3rem 0;
@@ -22,7 +21,6 @@ const NotFound = styled.p`
 `;
 
 function Search() {
-  useCloseNav();
   const navigate = useNavigate();
   const queryParam = useQueryParam("query");
   const [query, setQuery] = useState(queryParam);

@@ -2,7 +2,6 @@ import { useContext } from "react";
 import MovieList from "../components/common/MovieList";
 import Heading from "../components/common/Heading";
 import { favoritesStateContext } from "../contexts/favorites";
-import { useCloseNav } from "../hooks";
 import styled from "styled-components";
 
 const FavoritesMain = styled.main`
@@ -16,7 +15,6 @@ const FavoritesMain = styled.main`
 `;
 
 function Favorites() {
-  useCloseNav();
   const favoriteMovies = useContext(favoritesStateContext);
   return (
     <FavoritesMain>

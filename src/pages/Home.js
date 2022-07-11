@@ -3,10 +3,9 @@ import Loading from "../components/common/Loading";
 import SectionTitle from "../components/Home/SectionTitle";
 import HomeMovieList from "../components/Home/HomeMovieList";
 import { moviesContext } from "../contexts/movies";
-import { useCloseNav, useScroll } from "../hooks";
+import { useScroll } from "../hooks";
 
 const Home = () => {
-  useCloseNav();
   useScroll([]);
   const { loading, movies } = useContext(moviesContext);
   if (loading) {
