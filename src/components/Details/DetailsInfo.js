@@ -64,7 +64,6 @@ function DetailsInfo({ details }) {
       <Genres genres={genres} />
       <Overview>{overview}</Overview>
       <VideoLink videos={videos.results} />
-      <BackButton />
     </article>
   );
 }
