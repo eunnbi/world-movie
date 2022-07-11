@@ -5,16 +5,16 @@ import MoviesProvider from "./contexts/movies";
 import FavoritesProvider from "./contexts/favorites";
 import Header from "./components/Header";
 import Loading from "./components/common/Loading";
+import Search from "./pages/Search";
+import Movies from "./pages/Movies";
+import Favorites from "./pages/Favorites";
+import Details from "./pages/Details";
 import NotFound from "./pages/NotFound";
 import loadable from "@loadable/component";
 import theme from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 
 const Home = loadable(() => import("./pages/Home"));
-const Search = loadable(() => import("./pages/Search"));
-const Details = loadable(() => import("./pages/Details"));
-const Movies = loadable(() => import("./pages/Movies"));
-const Favorites = loadable(() => import("./pages/Favorites"));
 
 const queryClient = new QueryClient();
 
