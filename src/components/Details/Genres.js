@@ -16,13 +16,13 @@ const GenresItem = styled.li`
 `;
 
 function Genres({ genres }) {
-  return (
+  return genres.length !== 0 ? (
     <GenresList>
       {genres.map((genre, index) => (
         <GenresItem key={index}>{genre.name}</GenresItem>
       ))}
     </GenresList>
-  );
+  ) : null;
 }
 
 export default Genres;
