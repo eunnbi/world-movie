@@ -46,7 +46,7 @@ const NAV = [
   },
   {
     id: 2,
-    to: "/search?query=",
+    to: "/search?keyword=",
     text: "Search",
   },
   {
