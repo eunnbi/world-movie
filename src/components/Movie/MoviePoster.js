@@ -19,7 +19,7 @@ const Image = styled.img`
 
 const NoPoster = styled.div`
   ${posterStyle}
-  min-height: 300px;
+  min-height: 513px;
   height: 100%;
   background-color: white;
   font-size: 1.5rem;
@@ -30,6 +30,9 @@ const NoPoster = styled.div`
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   padding: 0 10px;
+  @media ${({ theme }) => theme.device.tablet} {
+    min-height: 300px;
+  }
   @media ${({ theme }) => theme.device.mobile} {
     min-height: 225px;
   }
