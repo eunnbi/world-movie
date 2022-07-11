@@ -7,7 +7,7 @@
 #### Custom Hook을 만들어 컴포넌트들의 중복 로직을 최소화할 수 있다!
 - [useScroll](https://github.com/eunnbi/movie-app/blob/main/src/hooks/useScroll.js) 🖱️
   - `deps`(의존성) 배열을 인자로 보내며 호출한다. 만약 의존성 배열에 있는 값이 업데이트되면 `scroll`을 맨 위로 이동시킨다.
-  - [Detail Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L34) 혹은 [Home Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Home.js#L10)에서 스크롤을 맨 위에 두지 않은 상태에서 다른 페이지에서 이동하고 오면 스크롤이 그 상태를 유지하고 있어서 페이지가 렌더링될 때 스크롤을 맨 위로 이동시키는 작업이 필요했다.
+  - [Details Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Details.js#L34)와 [Home Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Home.js#L10)에서 스크롤을 맨 위에 두지 않은 상태에서 다른 페이지에서 이동하고 오면 스크롤이 그 상태를 유지하고 있어서 페이지가 렌더링될 때 스크롤을 맨 위로 이동시키는 작업이 필요했다.
     - `useScroll([])`
   - [Movies Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Movies.js#L22)는 페이지네이션으로 구현되었는데 페이지 번호를 이동할 때마다 스크롤이 맨 위로 이동해야 한다.
     - `useScroll([page])`
