@@ -3,16 +3,13 @@ import Heading from "../common/Heading";
 import styled from "styled-components";
 
 const StyledMovieInfo = styled.div`
-  visibility: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 0.5rem 1rem;
-  transition: all 0.3s linear;
-  transform: translateY(100%);
 `;
 
 const MovieInfoRow = styled.div`
