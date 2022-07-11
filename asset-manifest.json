@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/world-movie/static/css/main.2937f90d.css",
-    "main.js": "/world-movie/static/js/main.57a14840.js",
-    "static/js/922.74ebf4bc.chunk.js": "/world-movie/static/js/922.74ebf4bc.chunk.js",
+    "main.js": "/world-movie/static/js/main.c9992450.js",
+    "static/js/922.75db41b7.chunk.js": "/world-movie/static/js/922.75db41b7.chunk.js",
     "static/media/youtube-icon.png": "/world-movie/static/media/youtube-icon.6f9e32ba8209c71da075.png",
     "index.html": "/world-movie/index.html",
     "main.2937f90d.css.map": "/world-movie/static/css/main.2937f90d.css.map",
-    "main.57a14840.js.map": "/world-movie/static/js/main.57a14840.js.map",
-    "922.74ebf4bc.chunk.js.map": "/world-movie/static/js/922.74ebf4bc.chunk.js.map"
+    "main.c9992450.js.map": "/world-movie/static/js/main.c9992450.js.map",
+    "922.75db41b7.chunk.js.map": "/world-movie/static/js/922.75db41b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2937f90d.css",
-    "static/js/main.57a14840.js"
+    "static/js/main.c9992450.js"
   ]
 }
