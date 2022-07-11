@@ -12,7 +12,7 @@
   - [Movies Page](https://github.com/eunnbi/movie-app/blob/main/src/pages/Movies.js#L22)는 페이지네이션으로 구현되었는데 페이지 번호를 이동할 때마다 스크롤이 맨 위로 이동해야 한다.
     - `useScroll([page])` 
 
-#### Custom Hook을 만들어 복잡한 컴포넌트 로직을 분리할 수 있다.
+#### Custom Hook을 만들어 컴포넌트 로직을 UI와 분리할 수 있다.
 - [useLike](https://github.com/eunnbi/movie-app/blob/main/src/hooks/useLike.js) 💜
   - 영화 좋아요 기능 로직을 구현한 함수와 좋아요 상태값을 반환하는 커스텀 훅이다.
   - [Movie 컴포넌트에서 useLike 사용하기](https://github.com/eunnbi/movie-app/blob/main/src/components/Movie/index.js#L30) 
