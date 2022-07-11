@@ -53,7 +53,7 @@
 
 <br/>
 
-## Query String으로 상태 기억하기
+## 💡 Query String으로 상태 기억하기
 - [Movies page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Movies.js)에서 [Details page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Details.js)로 이동하고 나서 다시 돌아오면 `page`상태가 초기화된다.
 - 이와 비슷하게 [Search page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Search.js)에서 [Details page](https://github.com/eunnbi/world-movie/blob/main/src/pages/Details.js)로 이동하고 다시 돌아오면 `keyword` 상태가 초기화된다.
 - 영화를 탐색하는 사용자 입장에서 `page`와 `keyword`가 페이지 이동하기 전 상태를 유지하는 것이 사용성이 더 좋을 거 같아 `query string`을 이용하여 상태를 기억하도록 구현했다.
