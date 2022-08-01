@@ -25,7 +25,7 @@ const MoviesProvider = ({ children }) => {
   useEffect(() => {
     setLoading(true);
     MOVIE_TYPE.forEach((type) => {
-      for (let page = 1; page <= 10; page++) {
+      for (let page = 1; page <= 5; page++) {
         getMovies(type, page).then((data) => {
           setMovies((prevMovies) => ({
             ...prevMovies,
