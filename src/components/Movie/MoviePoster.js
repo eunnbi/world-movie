@@ -3,24 +3,24 @@ import styled, { css } from "styled-components";
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w342";
 
 const posterStyle = css`
-  width: auto;
+  width: 342px;
+  height: 513px;
   @media ${({ theme }) => theme.device.tablet} {
     width: 200px;
+    height: 300px;
   }
   @media ${({ theme }) => theme.device.mobile} {
     width: 150px;
+    height: 225px;
   }
 `;
 
 const Image = styled.img`
   ${posterStyle}
-  height: auto;
 `;
 
 const NoPoster = styled.div`
   ${posterStyle}
-  min-height: 513px;
-  height: 100%;
   background-color: white;
   font-size: 1.5rem;
   display: flex;
@@ -30,12 +30,6 @@ const NoPoster = styled.div`
   color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   padding: 0 10px;
-  @media ${({ theme }) => theme.device.tablet} {
-    min-height: 300px;
-  }
-  @media ${({ theme }) => theme.device.mobile} {
-    min-height: 225px;
-  }
 `;
 
 function MoviePoster({ poster }) {
