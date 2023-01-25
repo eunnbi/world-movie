@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LikeButton from "./LikeButton";
 import MoviePoster from "./MoviePoster";
 import MovieInfo from "./MovieInfo";
@@ -13,7 +13,6 @@ const MovieLink = styled(Link)`
 `;
 
 const Movie = ({ movie }) => {
-  const { search, pathname } = useLocation();
   const {
     title,
     poster_path: poster,
@@ -25,9 +24,7 @@ const Movie = ({ movie }) => {
 
   return (
     <li>
-      <MovieLink
-        to={`/movie/${id}${search}${search ? "&" : "?"}from=${pathname}`}
-      >
+      <MovieLink to={`/movie/${id}`}>
         <LikeButton like={like} onLike={onLike} />
         <MoviePoster poster={poster} />
         <MovieInfo
