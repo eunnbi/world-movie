@@ -1,16 +1,16 @@
-import { useNavigate, useLocation } from "react-router-dom";
-import { useQueryParam } from "../../hooks/useQueryParam";
+import { useNavigate } from "react-router-dom";
 import { FiChevronLeft } from "react-icons/fi";
 import styled from "styled-components";
 
 const Button = styled.button`
-  color: #fff;
-  background-color: ${({ theme }) => theme.color.skyBlue};
-  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.3rem;
   border-radius: 5px;
   margin: 2rem 0;
-  transition: all 0.3s ease-in-out;
+  color: white;
+  background-color: ${({ theme }) => theme.color.skyBlue};
   svg {
     font-size: 1.3rem;
   }
@@ -18,14 +18,8 @@ const Button = styled.button`
 
 function BackButton() {
   const navigate = useNavigate();
-  const from = useQueryParam("from");
-  const page = useQueryParam("page");
-  const keyword = useQueryParam("keyword");
-  const to = from
-    ? `${from}${page ? `?page=${page}` : keyword ? `?keyword=${keyword}` : ""}`
-    : -1;
   return (
-    <Button onClick={() => navigate(to)}>
+    <Button onClick={() => navigate(-1)}>
       <FiChevronLeft />
     </Button>
   );
